@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #bf2626;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+img {
+    border-radius: 6px;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 10px;
+    text-transform: capitalize;
+}
+
+/* Styling til ret-informationen (article p {})
+*/
+
+.retContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1229px) {
+    .retContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .ret img {
+        width: 100%
+    }
+
+    .retContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .ret img {
+        width: 100%
+    }
+
+    .retContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+#modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#modal-content {
+
+    height: 70vh;
+    width: 70vw;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 4em;
+}
+
+#modal.vis {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s;
+}
+
+.modal-billede {
+    height: 50%;
+    width: auto;
+}
+
+#modal button {
+    margin-top: 10px;
+}
